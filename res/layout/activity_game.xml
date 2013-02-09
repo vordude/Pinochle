@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Game" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/hello_world" />
+    
+    <ImageView
+    android:id="@+id/card0"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content" />
+
+    <ImageView
+    android:id="@+id/card1"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content" />
+    
+    <ImageView
+    android:id="@+id/card2"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content" />
+    
+    <ImageView
+    android:id="@+id/card3"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content" />
+    
+    <ImageView
+    android:id="@+id/card4"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content" />
+    
+    <ImageView
+    android:id="@+id/card5"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content" />
+    
+    <ImageView
+    android:id="@+id/card6"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content" />
+
+    <ImageView
+    android:id="@+id/card7"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content" />
+    
+    <ImageView
+    android:id="@+id/card8"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content" />
+    
+    <ImageView
+    android:id="@+id/card9"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content" />
+    
+    <ImageView
+    android:id="@+id/card10"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content" />
+    
+    <ImageView
+    android:id="@+id/card11"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content" />
+                                                
+    <ImageView
+    android:id="@+id/card12"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content" />    
+</RelativeLayout>
