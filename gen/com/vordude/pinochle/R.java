@@ -52,18 +52,19 @@ public final class R {
         public static final int sixd=0x7f020026;
         public static final int sixh=0x7f020027;
         public static final int sixs=0x7f020028;
-        public static final int tenc=0x7f020029;
-        public static final int tend=0x7f02002a;
-        public static final int tenh=0x7f02002b;
-        public static final int tens=0x7f02002c;
-        public static final int threec=0x7f02002d;
-        public static final int threed=0x7f02002e;
-        public static final int threeh=0x7f02002f;
-        public static final int threes=0x7f020030;
-        public static final int twoc=0x7f020031;
-        public static final int twod=0x7f020032;
-        public static final int twoh=0x7f020033;
-        public static final int twos=0x7f020034;
+        public static final int table=0x7f020029;
+        public static final int tenc=0x7f02002a;
+        public static final int tend=0x7f02002b;
+        public static final int tenh=0x7f02002c;
+        public static final int tens=0x7f02002d;
+        public static final int threec=0x7f02002e;
+        public static final int threed=0x7f02002f;
+        public static final int threeh=0x7f020030;
+        public static final int threes=0x7f020031;
+        public static final int twoc=0x7f020032;
+        public static final int twod=0x7f020033;
+        public static final int twoh=0x7f020034;
+        public static final int twos=0x7f020035;
     }
     public static final class id {
         public static final int card0=0x7f070000;

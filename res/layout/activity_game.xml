@@ -1,15 +1,16 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@drawable/table"
+    android:tileMode="repeat"
+    android:layout_gravity="bottom">
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Game" >
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world" />
+    android:layout_gravity="center_horizontal" >
     
     <ImageView
     android:id="@+id/card0"
@@ -19,60 +20,74 @@
     <ImageView
     android:id="@+id/card1"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content" />
+    android:layout_width="wrap_content" 
+    android:paddingLeft="19dp" />
     
     <ImageView
     android:id="@+id/card2"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content" />
+    android:layout_width="wrap_content"
+    android:paddingLeft="38dp" />
     
     <ImageView
     android:id="@+id/card3"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content" />
+    android:layout_width="wrap_content"
+    android:paddingLeft="57dp" />
     
     <ImageView
     android:id="@+id/card4"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content" />
+    android:layout_width="wrap_content"
+    android:paddingLeft="76dp" />
     
     <ImageView
     android:id="@+id/card5"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content" />
+    android:layout_width="wrap_content"
+    android:paddingLeft="95dp" />
     
     <ImageView
     android:id="@+id/card6"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content" />
+    android:layout_width="wrap_content"
+    android:paddingLeft="114dp" />
 
     <ImageView
     android:id="@+id/card7"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content" />
+    android:layout_width="wrap_content"
+    android:paddingLeft="133dp" />
     
     <ImageView
     android:id="@+id/card8"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content" />
+    android:layout_width="wrap_content"
+    android:paddingLeft="152dp" />
     
     <ImageView
     android:id="@+id/card9"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content" />
+    android:layout_width="wrap_content"
+    android:paddingLeft="171dp" />
     
     <ImageView
     android:id="@+id/card10"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content" />
+    android:layout_width="wrap_content"
+    android:paddingLeft="190dp" />
     
     <ImageView
     android:id="@+id/card11"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content" />
+    android:layout_width="wrap_content"
+    android:paddingLeft="209dp" />
                                                 
     <ImageView
     android:id="@+id/card12"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content" />    
-</RelativeLayout>
+    android:layout_width="wrap_content" 
+    android:paddingLeft="228dp"/>  
+      
+</FrameLayout>
+</LinearLayout>

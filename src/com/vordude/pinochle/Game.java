@@ -28,19 +28,23 @@ public class Game extends Activity {
             hand.addCard(c);
             i++;
         }
-        
+
         setContentView(R.layout.activity_game);
         hand.sort();
         Integer j = 0;
         while (j < 12) {
             Card card = hand.getCard(j);
             Log.w("stuf", card.toString());
-            Integer id = getResources().getIdentifier(card.getCardImageResourceName(), "drawable", getApplicationContext().getPackageName());        
+            
+            Integer id = null;
+            id = getResources().getIdentifier(card.getCardImageResourceName(), "drawable", getApplicationContext().getPackageName());        
             //ImageView view = (ImageView) findViewById(R.id.card);
-            Integer imageViewId = getResources().getIdentifier("card" + j ,"id", getApplicationContext().getPackageName());
+            
+            Integer imageViewId = null;
+            imageViewId = getResources().getIdentifier("card" + j ,"id", getApplicationContext().getPackageName());
             Log.w("stuf", imageViewId.toString());
             ImageView view = (ImageView) findViewById(imageViewId);
-            view.setImageResource(id);   
+            view.setImageResource(id);
             j++;
         }
     }
