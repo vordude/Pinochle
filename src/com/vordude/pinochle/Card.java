@@ -1,6 +1,4 @@
-package com.vordude.pinochle;
-
-import com.vordude.pinochle.R; 
+package com.vordude.pinochle; 
 
 //Card.java - John K. Estell - 8 May 2003
 //last modified: 23 Febraury 2004
@@ -23,8 +21,7 @@ public class Card implements Comparable {
 // instance variables for the card 
 private Suit suitValue;
 private Rank rankValue;
-//private ImageIcon cardImage;
-private static boolean sortRankMajorOrder = true;
+private static boolean sortRankMajorOrder = false;
 
 
 /**
@@ -33,8 +30,6 @@ private static boolean sortRankMajorOrder = true;
 * @param rank the rank value of this card.
 * @param cardFace the face image of this card.
 */
-//public Card( Suit suit, Rank rank, ImageIcon cardFace ) {
-//   cardImage = cardFace;
 public Card( Suit suit, Rank rank ) {
    suitValue = suit;
    rankValue = rank;

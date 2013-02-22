@@ -1,93 +1,98 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" 
-    android:background="@drawable/table"
-    android:tileMode="repeat"
-    android:layout_gravity="bottom">
-
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center_horizontal" >
-    
-    <ImageView
-    android:id="@+id/card0"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content" />
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
 
     <ImageView
-    android:id="@+id/card1"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content" 
-    android:paddingLeft="19dp" />
-    
-    <ImageView
-    android:id="@+id/card2"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:paddingLeft="38dp" />
-    
-    <ImageView
-    android:id="@+id/card3"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:paddingLeft="57dp" />
-    
-    <ImageView
-    android:id="@+id/card4"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:paddingLeft="76dp" />
-    
-    <ImageView
-    android:id="@+id/card5"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:paddingLeft="95dp" />
-    
-    <ImageView
-    android:id="@+id/card6"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:paddingLeft="114dp" />
+        android:id="@+id/cardNorth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/aceh" />
 
-    <ImageView
-    android:id="@+id/card7"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:paddingLeft="133dp" />
-    
-    <ImageView
-    android:id="@+id/card8"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:paddingLeft="152dp" />
-    
-    <ImageView
-    android:id="@+id/card9"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:paddingLeft="171dp" />
-    
-    <ImageView
-    android:id="@+id/card10"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:paddingLeft="190dp" />
-    
-    <ImageView
-    android:id="@+id/card11"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:paddingLeft="209dp" />
-                                                
-    <ImageView
-    android:id="@+id/card12"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content" 
-    android:paddingLeft="228dp"/>  
-      
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.5"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/cardWest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/aced" />
+
+        <ImageView
+            android:id="@+id/cardEast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/aces" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/card0"
+            style="@style/SouthCard.First" />
+
+        <ImageView
+            android:id="@+id/card1"
+            style="@style/SouthCard" />
+
+        <ImageView
+            android:id="@+id/card2"
+            style="@style/SouthCard" />
+
+        <ImageView
+            android:id="@+id/card3"
+            style="@style/SouthCard" />
+
+        <ImageView
+            android:id="@+id/card4"
+            style="@style/SouthCard" />
+
+        <ImageView
+            android:id="@+id/card5"
+            style="@style/SouthCard" />
+
+        <ImageView
+            android:id="@+id/card6"
+            style="@style/SouthCard" />
+
+        <ImageView
+            android:id="@+id/card7"
+            style="@style/SouthCard" />
+
+        <ImageView
+            android:id="@+id/card8"
+            style="@style/SouthCard" />
+
+        <ImageView
+            android:id="@+id/card9"
+            style="@style/SouthCard" />
+
+        <ImageView
+            android:id="@+id/card10"
+            style="@style/SouthCard" />
+
+        <ImageView
+            android:id="@+id/card11"
+            style="@style/SouthCard" />
+
+        <ImageView
+            android:id="@+id/card12"
+            style="@style/SouthCard" />
+    </LinearLayout>
+
 </LinearLayout>

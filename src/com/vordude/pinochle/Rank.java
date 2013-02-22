@@ -21,7 +21,7 @@ import java.util.Collections;
 public class Rank implements Comparable {
 private String name;
 private String symbol;
-private static boolean aceHigh = true;
+private static Integer rankOrder = 3;
  
 /** 
  * The rank ace. 
@@ -86,12 +86,16 @@ private final static java.util.List VALUES_ACE_HIGH =
    Collections.unmodifiableList( 
       Arrays.asList( new Rank[] { TWO, THREE, FOUR, FIVE, SIX, SEVEN,
                                   EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE } ) );
-                                  
+
+private final static java.util.List VALUES_PINOCHLE =
+Collections.unmodifiableList( 
+   Arrays.asList( new Rank[] { NINE, JACK, QUEEN, KING, TEN, ACE } ) );
+
 /**
 * List of all rank values.  Used primarily for the purpose of iteration.
 */
 public final static java.util.List VALUES =
-   Collections.unmodifiableList( VALUES_KING_HIGH );
+   Collections.unmodifiableList( VALUES_PINOCHLE );
 
 
 // Constructor - declared private as only the predefined values should
@@ -102,23 +106,23 @@ private Rank( String nameValue, String symbolValue ) {
 }
  
  
-/**
-*  Sets the king to be the card having highest rank.  The ace is
-*  reduced to the lowest rank.
-*/
-public static void setKingHigh() {
-   aceHigh = false;
-}
  
  
 /**
-*  Sets the ace to be the card having highest rank.  The two becomes
-*  the lowest rank.
+*  Sets the card having highest rank.  
 */
 public static void setAceHigh() {
-   aceHigh = true;
+   rankOrder = 1;
 }
+public static void setKingHigh() {
+    rankOrder = 2;
+ }
+ public static void setPinochle() {
+    rankOrder = 3;
+ }
  
+
+
  
 /**
 *  Returns a description of this rank.
@@ -162,10 +166,15 @@ public String getSymbol() {
 */
 public int compareTo( Object otherRankObject ) {
    Rank otherRank = (Rank) otherRankObject;
-   if ( aceHigh )
-      return VALUES_ACE_HIGH.indexOf( this ) - VALUES_ACE_HIGH.indexOf( otherRank );
-   else
-      return VALUES_KING_HIGH.indexOf( this ) - VALUES_KING_HIGH.indexOf( otherRank );
+   if (rankOrder == 1) {
+       return VALUES_ACE_HIGH.indexOf( this ) - VALUES_ACE_HIGH.indexOf( otherRank );
+   }
+   else if (rankOrder == 2) {
+       return VALUES_KING_HIGH.indexOf( this ) - VALUES_KING_HIGH.indexOf( otherRank );    
+   }
+   else if (rankOrder == 3) {
+       return VALUES_PINOCHLE.indexOf( this ) - VALUES_PINOCHLE.indexOf( otherRank );
+   }
+   return VALUES_ACE_HIGH.indexOf( this ) - VALUES_ACE_HIGH.indexOf( otherRank );
 }
- 
 }                                                                 

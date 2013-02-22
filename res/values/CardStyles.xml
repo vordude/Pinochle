@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SouthCard">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">-65dp</item>
+        <item name="android:layout_alignTop">@+id/card0</item>
+        <item name="android:onClick">cardTap</item>
+    </style>
+        <style name="SouthCard.First">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_alignTop">@+id/card0</item>
+        <item name="android:onClick">cardTap</item>
+    </style>
+</resources>

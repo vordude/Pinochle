@@ -1,17 +1,16 @@
 package com.vordude.pinochle;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.res.Resources;
-import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 public class Game extends Activity {
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,33 +19,39 @@ public class Game extends Activity {
         Deck deck = pDeck.deck;
         deck.shuffle();
         
-        Hand hand = new PinochleHand();
+        Hand north = new PinochleHand();
+        Hand east = new PinochleHand();
+        Hand south = new PinochleHand();
+        Hand west = new PinochleHand();
         
         Integer i = 0;
         while (i < 12) {
             Card c = deck.dealCard();
-            hand.addCard(c);
+            north.addCard(c);
+            east.addCard(c);
+            south.addCard(c);
+            west.addCard(c);
             i++;
         }
 
         setContentView(R.layout.activity_game);
-        hand.sort();
+        south.sort();
         Integer j = 0;
         while (j < 12) {
-            Card card = hand.getCard(j);
-            Log.w("stuf", card.toString());
-            
+            Card card = south.getCard(j);           
             Integer id = null;
             id = getResources().getIdentifier(card.getCardImageResourceName(), "drawable", getApplicationContext().getPackageName());        
             //ImageView view = (ImageView) findViewById(R.id.card);
             
             Integer imageViewId = null;
             imageViewId = getResources().getIdentifier("card" + j ,"id", getApplicationContext().getPackageName());
-            Log.w("stuf", imageViewId.toString());
+            
             ImageView view = (ImageView) findViewById(imageViewId);
             view.setImageResource(id);
+            
             j++;
         }
+        
     }
 
     @Override
@@ -55,4 +60,28 @@ public class Game extends Activity {
         getMenuInflater().inflate(R.menu.activity_game, menu);
         return true;
     }
+    
+    public void cardTap(View v) {
+       Integer id = v.getId();
+       final ImageView imageView = (ImageView) findViewById(id);      
+       Animation playCard = AnimationUtils.loadAnimation(this, R.anim.playcard);
+       playCard.setFillAfter(true);
+       imageView.startAnimation(playCard);
+       
+       playCard.setAnimationListener(new AnimationListener() {
+                   public void onAnimationStart(Animation anim)
+                   {
+                   };
+                   public void onAnimationRepeat(Animation anim)
+                   {
+                   };
+                public void onAnimationEnd(Animation anim)
+                   {
+                       
+                      imageView.setClickable(false);
+                   };
+               });
+    }
 }
+
+

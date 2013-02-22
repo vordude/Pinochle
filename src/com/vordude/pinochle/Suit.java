@@ -37,7 +37,7 @@ public final static Suit SPADES = new Suit( "Spades", "s" );
 */
 public final static java.util.List VALUES = 
    Collections.unmodifiableList( 
-      Arrays.asList( new Suit[] { CLUBS, DIAMONDS, HEARTS, SPADES } ) );
+      Arrays.asList( new Suit[] { CLUBS, DIAMONDS, SPADES, HEARTS } ) );
 
 
 // Constructor - declared private as only the predefined values should
