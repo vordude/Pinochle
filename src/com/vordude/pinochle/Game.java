@@ -14,35 +14,17 @@ public class Game extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-        PinochleDeck pDeck = new PinochleDeck();
-        Deck deck = pDeck.deck;
-        deck.shuffle();
-        
-        Hand north = new PinochleHand();
-        Hand east = new PinochleHand();
-        Hand south = new PinochleHand();
-        Hand west = new PinochleHand();
-        
-        Integer i = 0;
-        while (i < 12) {
-            Card c = deck.dealCard();
-            north.addCard(c);
-            east.addCard(c);
-            south.addCard(c);
-            west.addCard(c);
-            i++;
-        }
-
+        PinochleHands dealtHands =  new PinochleHands();
         setContentView(R.layout.activity_game);
-        south.sort();
+
+        Hand south = dealtHands.south();
+        
         Integer j = 0;
         while (j < 12) {
             Card card = south.getCard(j);           
             Integer id = null;
             id = getResources().getIdentifier(card.getCardImageResourceName(), "drawable", getApplicationContext().getPackageName());        
-            //ImageView view = (ImageView) findViewById(R.id.card);
-            
+
             Integer imageViewId = null;
             imageViewId = getResources().getIdentifier("card" + j ,"id", getApplicationContext().getPackageName());
             
@@ -51,7 +33,7 @@ public class Game extends Activity {
             
             j++;
         }
-        
+        aiPlay(dealtHands);
     }
 
     @Override
@@ -81,6 +63,27 @@ public class Game extends Activity {
                       imageView.setClickable(false);
                    };
                });
+    }
+    
+    private void aiPlay(PinochleHands dealtHands) {
+        String cardWest = dealtHands.west().getCard(0).getCardImageResourceName();
+        setCard(cardWest, "cardWest");
+        
+        String cardNorth = dealtHands.north().getCard(0).getCardImageResourceName();
+        setCard(cardNorth, "cardNorth");
+        
+        String cardEast = dealtHands.east().getCard(0).getCardImageResourceName();
+        setCard(cardEast, "cardEast");
+    }
+    
+    private void setCard(String resourceName, String viewID) {
+        Integer id = null;
+        id = getResources().getIdentifier(resourceName, "drawable", getApplicationContext().getPackageName());        
+
+        Integer imageViewId = getResources().getIdentifier(viewID, "id", getApplicationContext().getPackageName());
+        ImageView view = (ImageView) findViewById(imageViewId);
+        
+        view.setImageResource(id);
     }
 }
 

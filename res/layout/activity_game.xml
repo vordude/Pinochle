@@ -10,8 +10,7 @@
     <ImageView
         android:id="@+id/cardNorth"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/aceh" />
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -24,15 +23,13 @@
             android:id="@+id/cardWest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/aced" />
+            android:layout_weight="1" />
 
         <ImageView
             android:id="@+id/cardEast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/aces" />
+            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
