@@ -70,23 +70,24 @@ public final class R {
         public static final int twos=0x7f020035;
     }
     public static final class id {
-        public static final int card0=0x7f080003;
-        public static final int card1=0x7f080004;
-        public static final int card10=0x7f08000d;
-        public static final int card11=0x7f08000e;
-        public static final int card12=0x7f08000f;
-        public static final int card2=0x7f080005;
-        public static final int card3=0x7f080006;
-        public static final int card4=0x7f080007;
-        public static final int card5=0x7f080008;
-        public static final int card6=0x7f080009;
-        public static final int card7=0x7f08000a;
-        public static final int card8=0x7f08000b;
-        public static final int card9=0x7f08000c;
-        public static final int cardEast=0x7f080002;
-        public static final int cardNorth=0x7f080000;
-        public static final int cardWest=0x7f080001;
-        public static final int menu_settings=0x7f080010;
+        public static final int card0=0x7f080004;
+        public static final int card1=0x7f080005;
+        public static final int card10=0x7f08000e;
+        public static final int card11=0x7f08000f;
+        public static final int card12=0x7f080010;
+        public static final int card2=0x7f080006;
+        public static final int card3=0x7f080007;
+        public static final int card4=0x7f080008;
+        public static final int card5=0x7f080009;
+        public static final int card6=0x7f08000a;
+        public static final int card7=0x7f08000b;
+        public static final int card8=0x7f08000c;
+        public static final int card9=0x7f08000d;
+        public static final int cardEast=0x7f080003;
+        public static final int cardNorth=0x7f080001;
+        public static final int cardWest=0x7f080002;
+        public static final int dealbutton=0x7f080000;
+        public static final int menu_settings=0x7f080011;
     }
     public static final class layout {
         public static final int activity_game=0x7f030000;

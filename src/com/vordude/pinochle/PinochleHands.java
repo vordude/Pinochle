@@ -1,7 +1,5 @@
 package com.vordude.pinochle;
 
-import android.util.Log;
-
 public class PinochleHands {
     private Hand south, west, north, east;
 
@@ -10,7 +8,7 @@ public class PinochleHands {
         east = new PinochleHand();
         south = new PinochleHand();
         west = new PinochleHand();
-        
+
         Deck pDeck = new PinochleDeck().deck;
         pDeck.shuffle();
         Integer i = 0;
@@ -21,7 +19,7 @@ public class PinochleHands {
             east.addCard(pDeck.dealCard());
             i++;
         }
-        sort(south, west, north, east);
+        sort();
     }
     public Hand south(){
         return south;
@@ -35,9 +33,8 @@ public class PinochleHands {
     public Hand east() {
         return east;
     }
-    
-    
-    private void sort(Hand south, Hand west, Hand north, Hand east) {
+
+    private void sort() {
         south.sort();
         west.sort();
         north.sort();

@@ -7,6 +7,13 @@
     android:gravity="center_horizontal"
     android:orientation="vertical" >
 
+    <Button
+        android:id="@+id/dealbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="dealShortcut"
+        android:text="deal" />
+
     <ImageView
         android:id="@+id/cardNorth"
         android:layout_width="wrap_content"
