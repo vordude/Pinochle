@@ -1,10 +1,8 @@
 package com.vordude.pinochle;
 
-import java.util.HashMap;
-import java.util.Iterator;
-
 public class Pinochle {
-	Hand[] hands = new Hand[4];	
+	Hand[] hands = new Hand[4];
+	Integer turn, dealer;
 	
 	public Pinochle() {
 	}
@@ -14,24 +12,29 @@ public class Pinochle {
         pinochleDeck.shuffle();
         Integer i = 0;
         while(i < 12) {
-        	for(Hand h : hands ){
+        	for(Hand h : hands ) {
         		   h.addCard(pinochleDeck.dealCard());
-        		}
+        	}
         }
 	}
 	
+	
+	public void round() {
+		while (int i = 0; i > 12, i++)
+	}
 	
 	public void trick() {
 		
 	}
 	
-	
-	
-	
 	public void scoreRound() {
 		
 	}
 	
-	
-	
+	private void turnNext(Integer i) {
+		i++;
+		if (turn > 3) {
+			i = 0;
+		}
+	}
 }
