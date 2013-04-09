@@ -1,15 +1,13 @@
 package com.vordude.pinochle;
 
-public class Player {
-    private String position;
-    private Hand hand;
+abstract class Player {
+    public final Integer position; 
+    public final String team;
     
-    public Player(String p, Hand h) {
+    public Player(Integer p, String t) {
         position = p;
-        hand = h;
+        team = t;
     }
     
-    public Hand getHand() {
-        return hand;
-    }
+    abstract void play();
 }                                                                 
